@@ -23,6 +23,8 @@ public class LambdaButtons {
 		
 		window.setVisible(true);
 		window.pack();
+		
+		addNumbers.addActionListener(e -> System.out.println("hi"));
 	}
 	
 	public static void main(String[] args) {
