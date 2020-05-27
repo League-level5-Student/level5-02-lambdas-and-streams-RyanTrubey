@@ -1,9 +1,11 @@
 package _00_JButtons_with_Lambdas;
 
 import java.awt.FlowLayout;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class LambdaButtons {
 	private JFrame window = new JFrame();
@@ -24,7 +26,12 @@ public class LambdaButtons {
 		window.setVisible(true);
 		window.pack();
 		
-		addNumbers.addActionListener(e -> System.out.println("hi"));
+		addNumbers.addActionListener(e -> System.out.println(Integer.parseInt(JOptionPane.showInputDialog("number 1")) + Integer.parseInt(JOptionPane.showInputDialog("number 2"))));
+		randNumber.addActionListener(e -> {
+			int max = Integer.parseInt(JOptionPane.showInputDialog("Enter max number"));
+			JOptionPane.showMessageDialog(null, "Random Number: " + new Random().nextInt(max));
+		});
+		tellAJoke.addActionListener(e -> JOptionPane.showMessageDialog(null, "Joke"));
 	}
 	
 	public static void main(String[] args) {
