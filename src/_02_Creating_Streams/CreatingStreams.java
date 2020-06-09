@@ -2,6 +2,7 @@ package _02_Creating_Streams;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Stack;
 import java.util.stream.Stream;
@@ -28,5 +29,13 @@ public class CreatingStreams {
 		dQueue.push(1.0);
 		dQueue.push(2.0);
 		dQueue.push(3.0);
+		
+		Stream<String> strStream = Arrays.stream(strArr);
+		
+		Stream<Integer> intStream = intList.stream();
+		
+		Stream<Random> randStream = randStack.stream();
+		
+		Stream<Double> dQueueStream = dQueue.stream();
 	}
 }
